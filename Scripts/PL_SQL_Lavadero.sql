@@ -13,6 +13,8 @@
    Este archivo requiere que previamente se hayan ejecutado:
    - DDL_Lavadero.sql
    - DML_Lavadero.sql
+   Es el ultimo de los cinco scripts del proyecto (DDL, DML,
+   Consultas_Reportes, DQL y PL/SQL).
 
    IMPORTANTE
    ----------

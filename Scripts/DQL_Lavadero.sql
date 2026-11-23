@@ -1,29 +1,50 @@
 -- ============================================================================
 -- CONSULTAS DQL - PROYECTO LAVADERO DE AUTOS
 -- ============================================================================
+-- Requiere haber ejecutado antes DDL_Lavadero.sql y DML_Lavadero.sql.
+-- Orden de ejecucion del proyecto: DDL, DML, Consultas_Reportes, DQL (este
+-- archivo) y PL_SQL. Solo contiene consultas SELECT; se puede ejecutar
+-- varias veces sin modificar datos.
+-- ============================================================================
 
--- 1. Reporte de servicios más facturados por sucursal (TOP 5 / primeros 5 registros):
+-- 1. Reporte de servicios más facturados por sucursal (TOP 5 en cada sucursal):
 -- Muestra los 5 servicios con mayor ingreso total facturado en cada sucursal,
--- uniendo EMPRESA, DETALLE_ORDEN y SERVICIO mediante INNER JOIN, agrupando por
--- sucursal, ciudad y nombre del servicio, y ordenando de mayor a menor ingreso.
+-- uniendo EMPRESA, DETALLE_ORDEN y SERVICIO mediante INNER JOIN y agrupando por
+-- sucursal, ciudad y nombre del servicio. ROW_NUMBER() con PARTITION BY numera
+-- los servicios dentro de cada sucursal para quedarse con los 5 primeros de cada una
+-- (FETCH FIRST solo limitaría el resultado total, no por sucursal).
 SELECT
-    e.NOMBRE_SUCURSAL,
-    e.CIUDAD,
-    s.NOMBRE_SERVICIO,
-    COUNT(do.ID_DETALLE) AS CANTIDAD_SERVICIOS,
-    SUM(do.PRECIO_APLICADO) AS INGRESO_TOTAL
-FROM EMPRESA e
-INNER JOIN DETALLE_ORDEN do
-    ON e.ID_EMPRESA = do.ID_EMPRESA
-INNER JOIN SERVICIO s
-    ON do.ID_SERVICIO = s.ID_SERVICIO
-GROUP BY
-    e.NOMBRE_SUCURSAL,
-    e.CIUDAD,
-    s.NOMBRE_SERVICIO
+    NOMBRE_SUCURSAL,
+    CIUDAD,
+    NOMBRE_SERVICIO,
+    CANTIDAD_SERVICIOS,
+    INGRESO_TOTAL
+FROM (
+    SELECT
+        e.NOMBRE_SUCURSAL,
+        e.CIUDAD,
+        s.NOMBRE_SERVICIO,
+        COUNT(do.ID_DETALLE) AS CANTIDAD_SERVICIOS,
+        SUM(do.PRECIO_APLICADO) AS INGRESO_TOTAL,
+        ROW_NUMBER() OVER (
+            PARTITION BY e.ID_EMPRESA
+            ORDER BY SUM(do.PRECIO_APLICADO) DESC, s.NOMBRE_SERVICIO
+        ) AS POSICION
+    FROM EMPRESA e
+    INNER JOIN DETALLE_ORDEN do
+        ON e.ID_EMPRESA = do.ID_EMPRESA
+    INNER JOIN SERVICIO s
+        ON do.ID_SERVICIO = s.ID_SERVICIO
+    GROUP BY
+        e.ID_EMPRESA,
+        e.NOMBRE_SUCURSAL,
+        e.CIUDAD,
+        s.NOMBRE_SERVICIO
+)
+WHERE POSICION <= 5
 ORDER BY
-    INGRESO_TOTAL DESC
-FETCH FIRST 5 ROWS ONLY;
+    NOMBRE_SUCURSAL,
+    INGRESO_TOTAL DESC;
 
 -- 2. Reporte de carga de órdenes por empleado (incluyendo empleados sin órdenes asignadas):
 -- Lista los empleados de cada sucursal junto con el total de órdenes de lavado asignadas,
@@ -79,22 +100,29 @@ ORDER BY
 
 -- 4. Reporte de las 3 sucursales con mayor facturación y recaudo:
 -- Obtiene las 3 sucursales con mayor valor total facturado y su acumulado de pagos recibidos,
--- uniendo EMPRESA, ORDEN_LAVADO y FACTURA con INNER JOIN y PAGO con LEFT OUTER JOIN,
+-- uniendo EMPRESA, ORDEN_LAVADO y FACTURA con INNER JOIN y los pagos con LEFT OUTER JOIN,
 -- agrupando por sucursal y ciudad, y ordenando por total facturado de forma descendente.
+-- Los pagos se suman primero por factura en una subconsulta: si se unieran fila a fila,
+-- una factura con varios abonos repetiría su TOTAL y el total facturado quedaría inflado.
+-- (Con los datos actuales hay dos sucursales, por lo que el reporte devuelve 2 filas.)
 SELECT
     e.ID_EMPRESA,
     e.NOMBRE_SUCURSAL,
     e.CIUDAD,
-    COUNT(DISTINCT f.ID_FACTURA) AS FACTURAS_EMITIDAS,
+    COUNT(f.ID_FACTURA) AS FACTURAS_EMITIDAS,
     SUM(f.TOTAL) AS TOTAL_FACTURADO,
-    NVL(SUM(p.MONTO), 0) AS TOTAL_RECAUDADO
+    NVL(SUM(pf.TOTAL_PAGADO), 0) AS TOTAL_RECAUDADO
 FROM EMPRESA e
 INNER JOIN ORDEN_LAVADO ol
     ON e.ID_EMPRESA = ol.ID_EMPRESA
 INNER JOIN FACTURA f
     ON ol.ID_ORDEN = f.ID_ORDEN
-LEFT OUTER JOIN PAGO p
-    ON f.ID_FACTURA = p.ID_FACTURA
+LEFT OUTER JOIN (
+    SELECT ID_FACTURA, SUM(MONTO) AS TOTAL_PAGADO
+    FROM PAGO
+    GROUP BY ID_FACTURA
+) pf
+    ON f.ID_FACTURA = pf.ID_FACTURA
 GROUP BY
     e.ID_EMPRESA,
     e.NOMBRE_SUCURSAL,

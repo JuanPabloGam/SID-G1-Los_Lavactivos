@@ -15,12 +15,13 @@
    2. Validacion de la carga y COMMIT condicionado a que todo sea correcto.
    3. Resumen de filas cargadas y mensaje final de resultado.
 
-   ORDEN DE EJECUCION DE LOS CUATRO SCRIPTS DEL PROYECTO
-   -----------------------------------------------------
+   ORDEN DE EJECUCION DE LOS CINCO SCRIPTS DEL PROYECTO
+   ----------------------------------------------------
    1. DDL_Lavadero.sql          (debe haberse ejecutado antes)
    2. DML_Lavadero.sql          (este archivo)
    3. Consultas_Reportes.sql
-   4. PL_SQL_Lavadero.sql
+   4. DQL_Lavadero.sql
+   5. PL_SQL_Lavadero.sql
 
    COMO EJECUTAR
    -------------
@@ -56,10 +57,10 @@
    - Ningun pago supera el total ni es anterior a la emision de la factura.
    - METODO_PAGO usa solo Efectivo, Tarjeta y Transferencia.
 
-   CAMBIOS FRENTE AL ARCHIVO ORIGINAL (02_DML_Lavadero.sql)
-   --------------------------------------------------------
-   - Se conservan los 155 registros. La unica modificacion de datos, autorizada,
-     es la reasignacion de dos ordenes: la orden 8 pasa del empleado 4 (Cajero)
+   CAMBIOS FRENTE A LA PRIMERA VERSION DEL DML
+   -------------------------------------------
+   - Se conservan los 155 registros. La unica modificacion de datos fue la
+     reasignacion de dos ordenes: la orden 8 pasa del empleado 4 (Cajero)
      al empleado 2 (Lavador) y la orden 18 del empleado 8 (Cajera) al empleado 6
      (Lavadora), para que ningun cajero figure como responsable de un lavado.
    - Todos los INSERT llevan lista explicita de columnas.
@@ -176,7 +177,7 @@ INSERT INTO VEHICULO (ID_VEHICULO, ID_CLIENTE, PLACA, MARCA, COLOR, MODELO, TIPO
    20 ordenes: 10 en cada sede, entre enero y marzo de 2026. Todas estan
    ENTREGADA y la salida es posterior al ingreso. Cada empleado asignado
    pertenece a la misma sede de la orden.
-   Cambio autorizado frente al archivo original: las ordenes 8 y 18 estaban
+   Cambio frente a la primera version: las ordenes 8 y 18 estaban
    asignadas a cajeros (empleados 4 y 8) y se reasignaron a los empleados 2 y 6
    (lavadores de su misma sede).
    --------------------------------------------------------------------------- */

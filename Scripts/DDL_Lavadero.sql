@@ -18,12 +18,13 @@
    5. Comentarios de tablas y columnas (COMMENT ON).
    6. Consultas de verificacion y mensaje final de resultado.
 
-   ORDEN DE EJECUCION DE LOS CUATRO SCRIPTS DEL PROYECTO
-   -----------------------------------------------------
+   ORDEN DE EJECUCION DE LOS CINCO SCRIPTS DEL PROYECTO
+   ----------------------------------------------------
    1. DDL_Lavadero.sql          (este archivo)
    2. DML_Lavadero.sql          (datos de prueba)
    3. Consultas_Reportes.sql    (reportes)
-   4. PL_SQL_Lavadero.sql       (funcion, procedimiento y trigger)
+   4. DQL_Lavadero.sql          (consultas adicionales)
+   5. PL_SQL_Lavadero.sql       (funcion, procedimiento y trigger)
 
    COMO EJECUTAR
    -------------

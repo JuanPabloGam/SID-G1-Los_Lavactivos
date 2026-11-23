@@ -4,13 +4,12 @@
    Generar reportes de gestion, operacion, facturacion y pagos del lavadero
    utilizando las nueve tablas del modelo definitivo.
 
-   IMPORTANTE SOBRE EL ALCANCE
-   --------------------------
-   No se adjunto el listado documental de los reportes originalmente
-   propuestos. Por esa razon, estos diez reportes se documentan como
-   PROPUESTAS PARA LA VERSION DEFINITIVA, basadas en el modelo y los datos
-   de prueba aprobados. No se presentan como transcripcion de un listado
-   original que no estuvo disponible.
+   ALCANCE
+   -------
+   El caso de estudio planteaba cuatro reportes iniciales (historial por
+   vehiculo, servicios por empleado, ventas y clientes con sus vehiculos).
+   Para la version final el equipo los amplio a estos diez reportes,
+   definidos a partir del modelo de nueve tablas y de los datos de prueba.
 
    REQUISITO DE LA ACTIVIDAD
    ------------------------
@@ -20,11 +19,12 @@
    El valor se repite en todas las filas del mismo resultado.
 
    ORDEN DE EJECUCION
-   -----------------
+   ------------------
    1. DDL_Lavadero.sql
    2. DML_Lavadero.sql
    3. Consultas_Reportes.sql (este archivo)
-   4. PL_SQL_Lavadero.sql
+   4. DQL_Lavadero.sql
+   5. PL_SQL_Lavadero.sql
 
    COMO EJECUTAR
    -------------
