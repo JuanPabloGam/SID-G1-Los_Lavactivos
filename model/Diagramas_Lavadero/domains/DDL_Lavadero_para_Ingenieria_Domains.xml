@@ -1,0 +1,190 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="DDL_Lavadero_para_Ingenieria_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_500" id="0DF176F8-761D-150A-0C35-794D8B16E0CD">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>500</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_5_0_0" id="2382B2DA-A201-A925-14E0-7D035629F244">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_60" id="2E8AA696-7D90-2503-5C63-EBD6592E53C2">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>60</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="38C5AD50-0744-5943-1C2B-B54380F8B85B">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>50</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="454BF13F-DD98-E949-3F22-5E5419EDF7C4">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>6</dataTypePrecision>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_0_0" id="69E023E0-E10C-DF4E-1984-F7624AB81A5B">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10" id="6D9F1316-9F4F-4322-76BA-CBD36422EF2C">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>10</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_120" id="7056C7BB-D4AA-357A-659C-E7C8559707E3">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>120</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_12_2_0" id="78199405-4E0C-E257-459A-CDF1FB152C76">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="8925068A-C409-449E-E89A-FD45C0C9B953">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>20</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_15" id="9505763E-DAB8-062B-9F6F-D81BAF1FF6A8">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>15</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_200" id="A165EDC7-58CC-5524-D71B-9E562D12C85C">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>200</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_150" id="B9BD1C13-2348-41A8-D240-FDE346BB48DF">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>150</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_300" id="C9BFE784-DA16-BA72-1506-0AF26CA1B2E4">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>300</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_80" id="DE845074-FD19-B8A9-8A34-86A24A9A2618">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>80</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_30" id="F2E7CDDD-C697-1BCB-8688-933469ADFE03">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>30</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100" id="FDE13010-785E-725C-FEDB-61ADEB15273D">
+<createdBy>juanc</createdBy>
+<createdTime>2026-11-24 04:05:31 UTC</createdTime>
+<ownerDesignName>Diagramas_Lavadero</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>100</dataTypeSize>
+<fileName>DDL_Lavadero_para_Ingenieria_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>
